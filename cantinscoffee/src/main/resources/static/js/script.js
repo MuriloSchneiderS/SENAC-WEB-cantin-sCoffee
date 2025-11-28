@@ -16,6 +16,7 @@ function ready(){
       nomes[i]=items[i].id.replace("-"," ")/*transforma o id em um nome simples para localizar a pesquisa*/
       if(nomes[i].includes(input)){
         document.location.hash = `#${items[i].id}`;/*redireciona para o primeiro item encontrado semelhante à pesquisa*/
+        document.location.hash = items[i].closest(".cardapio").id;
         return document.location.hash = `#${searchbar.id}`;/*redireciona o foco de volta para a barra de pesquisa*/
       }
     }

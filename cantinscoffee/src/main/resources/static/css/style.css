@@ -226,6 +226,10 @@ header menu a:hover{
 .logo-banner .logo{
     position: absolute;
 }
+.swiper-slide-active{
+    border: 2px solid #e5d3ba;
+    box-shadow: 5px 5px 0 0 #181f2743;
+}
 
 /*SACOLA / CARRINHO*/
 .pop-ajuda{
