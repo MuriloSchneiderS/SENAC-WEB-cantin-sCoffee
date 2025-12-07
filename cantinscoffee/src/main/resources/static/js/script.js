@@ -13,10 +13,11 @@ function ready(){
     if(input=="")
       return;/*cancela a busca quando o usuário apaga a pesquisa*/
     for(let i=0; i<items.length; i++){
+      items[i].closest(".card").classList.remove("buscado");/*remove classe buscado visual de buscas anteriores*/
       nomes[i]=items[i].id.replace("-"," ")/*transforma o id em um nome simples para localizar a pesquisa*/
       if(nomes[i].includes(input)){
         document.location.hash = `#${items[i].id}`;/*redireciona para o primeiro item encontrado semelhante à pesquisa*/
-        items[i].closest(".card").classList.add("buscado");/*destaque visual no item encontrado*/
+        items[i].closest(".card").classList.add("buscado");/*adiciona classe buscado no item encontrado*/
         document.location.hash = items[i].closest(".cardapio").id;
         return document.location.hash = `#${searchbar.id}`;/*redireciona o foco de volta para a barra de pesquisa*/
       }
